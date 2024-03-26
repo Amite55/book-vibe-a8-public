@@ -7,11 +7,14 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 
 const BookCard = ({ items }) => {
-    const { bookName, author, image, rating} = items;
+    const {bookId, bookName, author, image, rating} = items || {};
+    // console.log(bookId)
     return (
-        <Card className="mt-12 p-6">
+      <Link to={`/booksDetails/${bookId}`}>
+                  <Card className="mt-12 p-6">
             <CardHeader color="" className="relative w-full items-center flex justify-center mx-auto h-56 bg-[#F3F3F3] shadow-none">
                 <img
                     src={image}
@@ -45,6 +48,7 @@ const BookCard = ({ items }) => {
             </div>
 
         </Card>
+      </Link>
     );
 };
 

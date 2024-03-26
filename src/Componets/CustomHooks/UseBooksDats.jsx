@@ -5,13 +5,12 @@ const UseBooksDats = () => {
 
     useEffect( () => {
         const fetchData = async () => {
-            const response = await fetch("/data.json")
+            const response = await fetch("/public/data.json")
             const data = await response.json()
             setData(data)
         }
         fetchData()
     },[])
-
     return {data};
 };
 
