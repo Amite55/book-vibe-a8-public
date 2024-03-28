@@ -4,10 +4,20 @@ import UseLocalStorageData from '../Componets/CustomHooks/UseLocalStorageData';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
-// const {localData} = UseLocalStorageData();
-// console.log(localData)
 
 const data = [
+  {
+    name: '1994',
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: '1994',
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
   {
     name: '1994',
     uv: 4000,
@@ -34,12 +44,13 @@ const TriangleBar = (props) => {
 
 const PageToRead = () => {
 
+    const {localData} = UseLocalStorageData();
 
     return (
         <BarChart
         width={1000}
         height={500}
-        data={data}
+        data={localData}
         margin={{
           top: 20,
           right: 30,
@@ -48,10 +59,10 @@ const PageToRead = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis dataKey="bookName" />
         <YAxis />
         <Tooltip />
-        <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+        <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
           ))}
