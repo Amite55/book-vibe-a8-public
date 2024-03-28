@@ -11,7 +11,9 @@ const Banner = () => {
                  <Button color="blue">View The List</Button>
             </Link>
             </div>
-            <img src="/public/images/banner.png" alt="" />
+            <div className="sm:w-[220px] lg:">
+                 <img src="/public/images/banner.png" alt="" />
+            </div>
 
         </div>
     );

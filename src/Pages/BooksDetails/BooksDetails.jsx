@@ -36,7 +36,7 @@ const BooksDetails = () => {
 
     return (
        
-        <Card className="max-w-6xl mx-auto h-[550px] flex-row justify-between gap-5">
+        <Card className="max-w-6xl mx-auto  flex-row justify-between gap-5">
       <CardHeader
         shadow={false}
         floated={false}

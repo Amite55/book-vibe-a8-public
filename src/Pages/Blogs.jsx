@@ -2,7 +2,8 @@
 
 const Blogs = () => {
     return (
-        <div className='flex justify-between max-w-6xl mx-auto'>
+        <div className='lg:flex lg:justify-between max-w-6xl mx-auto'>
+
             <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex justify-between pb-4 border-bottom">
                     <div className="flex items-center">

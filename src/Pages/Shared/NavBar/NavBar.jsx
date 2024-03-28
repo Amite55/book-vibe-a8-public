@@ -30,7 +30,7 @@ const NavBar = () => {
           color="blue-gray"
           className="p-1 font-normal"
         >
-          <NavLink to='/' className={({isActive}) => isActive ? 'border-2 border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
+          <NavLink to='/' className={({isActive}) => isActive ? 'border-b border-t border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
           Home
           </NavLink>
         </Typography>
@@ -40,7 +40,7 @@ const NavBar = () => {
           color="blue-gray"
           className="p-1 font-normal"
         >
-          <NavLink to='/bookList' className= {({isActive}) => isActive ? 'border-2 border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
+          <NavLink to='/bookList' className= {({isActive}) => isActive ? 'border-b border-t border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
           Listed Books
           </NavLink >
         </Typography>
@@ -50,7 +50,7 @@ const NavBar = () => {
           color="blue-gray"
           className="p-1 font-normal"
         >
-          <NavLink to='/pageRead' className= {({isActive}) => isActive ? 'border-2 border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
+          <NavLink to='/pageRead' className= {({isActive}) => isActive ? 'border-b border-t border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
           Pages to Read
           </NavLink>
         </Typography>
@@ -60,7 +60,7 @@ const NavBar = () => {
           color="blue-gray"
           className="p-1 font-normal"
         >
-          <NavLink to='/contact' className= {({isActive}) => isActive ? 'border-2 border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
+          <NavLink to='/contact' className= {({isActive}) => isActive ? 'border-b border-t border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
           Contact Us
           </NavLink>
         </Typography>
@@ -70,7 +70,7 @@ const NavBar = () => {
           color="blue-gray"
           className="p-1 font-normal"
         >
-          <NavLink to='/blogs' className= {({isActive}) => isActive ? 'border-2 border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
+          <NavLink to='/blogs' className= {({isActive}) => isActive ? 'border-b border-t border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
           Blogs
           </NavLink>
         </Typography>
@@ -80,11 +80,11 @@ const NavBar = () => {
     return (
         <div>
         <Navbar className=" top-0 z-10 h-max max-w-6xl rounded-none mx-auto py-2 lg:px-8 lg:py-4 shadow-none">
-          <div className="flex items-center justify-between text-blue-gray-900">
+          <div className="flex items-center justify-between text-blue-gray-900 ">
             <Typography
               as="a"
               href="#"
-              className="mr-4 cursor-pointer hover:bg-gray-500 p-2 font-bold text-2xl rounded-lg "
+              className="mr-4 cursor-pointer hover:bg-gray-500 p-2 font-bold text-2xl rounded-lg border-t border-b border-green-600"
             >
              Book Vibe
             </Typography>

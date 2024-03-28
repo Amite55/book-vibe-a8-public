@@ -5,7 +5,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 const ContactUs = () => {
     return (
-        <div className="max-w-6xl mx-auto flex justify-around gap-6 mt-12">
+        <div className="lg:flex lg:justify-around max-w-6xl mx-auto  gap-6 mt-12">
+
          <iframe src="https://www.google.com/maps/embed?pb=!…" width="500" height="500"></iframe>
 
          <div className="space-y-7">
