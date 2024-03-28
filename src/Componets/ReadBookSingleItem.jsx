@@ -8,7 +8,11 @@ import {
 
 import { MdFindInPage } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
+
+
 const ReadBookSingleItem = ({ item }) => {
+
+    
     const { bookName, image, author, totalPages, rating, category, publisher, yearOfPublication, tags } = item;
     return (
         <Card className="w-full flex-row ">

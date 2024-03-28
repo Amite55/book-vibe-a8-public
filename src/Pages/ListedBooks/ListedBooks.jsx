@@ -10,6 +10,18 @@ const ListedBooks = () => {
 
     return (
         <div className="mt-10 max-w-6xl mx-auto">
+
+            <div className="text-center">
+            <details className="dropdown">
+                <summary className="m-1 btn bg-green-700 text-white">Short By</summary>
+                <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                    <li><a>Rating</a></li>
+                    <li><a>Number of Page</a></li>
+                    <li><a>Publisher Year</a></li>
+                </ul>
+            </details>
+            </div>
+
             {/* ------Read tab and whitelist tab---------- */}
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800 my-8">
                 <Link to=''
