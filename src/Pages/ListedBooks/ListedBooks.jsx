@@ -9,7 +9,7 @@ const ListedBooks = () => {
 
 
     return (
-        <div className="mt-10 max-w-6xl mx-auto">
+        <div className="mt-10 max-w-5xl mx-auto">
 
             <div className="text-center">
             <details className="dropdown">

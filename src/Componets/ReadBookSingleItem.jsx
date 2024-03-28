@@ -8,12 +8,13 @@ import {
 
 import { MdFindInPage } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 const ReadBookSingleItem = ({ item }) => {
 
     
-    const { bookName, image, author, totalPages, rating, category, publisher, yearOfPublication, tags } = item;
+    const {bookId, bookName, image, author, totalPages, rating, category, publisher, yearOfPublication, tags } = item;
     return (
         <Card className="w-full flex-row ">
             <CardHeader
@@ -46,7 +47,9 @@ const ReadBookSingleItem = ({ item }) => {
                 <div className="flex gap-4">
                     <p className="p-1 rounded-full bg-light-green-100 text-green-700">Category : {category}</p>
                     <p className="p-1 rounded-full bg-orange-100  text-orange-800">Rating : {rating}</p>
+                    <Link to={`/booksDetails/${bookId}`}>
                     <button className="bg-green-800 text-white rounded-full p-1">view Details</button>
+                    </Link>
                 </div>
             </CardBody>
         </Card>
