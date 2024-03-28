@@ -54,6 +54,16 @@ const NavBar = () => {
           Pages to Read
           </NavLink>
         </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <NavLink to='/contact' className= {({isActive}) => isActive ? 'border-2 border-green-500 font-bold px-2 py-1 rounded-sm' : 'flex items-center hover:bg-gray-500 rounded-sm px-2 py-1'}>
+          Contact Us
+          </NavLink>
+        </Typography>
       </ul>
     );
 
