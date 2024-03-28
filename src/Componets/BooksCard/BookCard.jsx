@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 
 const BookCard = ({ items }) => {
-    const {bookId, bookName, author, image, rating} = items || {};
+    const {bookId, bookName, author, image, rating, category, tags} = items || {};
     // console.log(bookId)
     return (
       <Link to={`/booksDetails/${bookId}`}>
@@ -23,10 +23,10 @@ const BookCard = ({ items }) => {
             </CardHeader>
             <div className='my-3 flex gap-3'>
                 <Button variant="outlined" size='sm' className="rounded-full border-[#23BE0A] text-[#23BE0A]">
-                    Young Adult
+                    {tags[1]}
                 </Button>
                 <Button variant="outlined" size='sm' className="rounded-full border-[#23BE0A] text-[#23BE0A]">
-                    Identity
+                    {tags[0]}
                 </Button>
             </div>
             <p>By: {author}</p>
@@ -37,7 +37,7 @@ const BookCard = ({ items }) => {
                 </Typography>
             </CardBody>
             <div className='flex justify-between'>
-                <p>Fiction</p>
+                <p>{category}</p>
                 <p className='flex gap-2'>{rating}
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

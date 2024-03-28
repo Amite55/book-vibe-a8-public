@@ -3,6 +3,9 @@ import Roote from "../Layout/Roote";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Shared/Home/Home";
 import BooksDetails from "../Pages/BooksDetails/BooksDetails";
+import ListedBooks from "../Pages/ListedBooks/ListedBooks";
+import ReadBook from "../Componets/ReadBook";
+import WishListBook from "../Componets/WishListBook";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +19,17 @@ const router = createBrowserRouter([
         },
         {
           path: "/bookList",
-          element: <h1>Listed book</h1>,
+          element: <ListedBooks/>,
+          children: [
+            {
+              index: true,
+              element: <ReadBook/>,
+            },
+            {
+              path: 'wishlist',
+              element: <WishListBook/>,
+            }
+          ]
         },
         {
           path: "/pageRead",

@@ -9,6 +9,7 @@ import {
     Typography,
     Button,
   } from "@material-tailwind/react";
+import { saveLocalStorage, saveLocalStorageWishlist } from "../../utilyty/localStorage";
 
 const BooksDetails = () => {
     const {bookId} = useParams();
@@ -20,7 +21,19 @@ const BooksDetails = () => {
         setSingleBook(singleBook)
        }
    },[bookId, data])
-   const {bookName, author, image, review, category, publisher, totalPages, rating, yearOfPublication } = book || {};
+
+
+   const handleReadBtn = () => {
+    saveLocalStorage(book)
+   }
+
+   const handleWishlistBtn = () => {
+      saveLocalStorageWishlist(book)
+   }
+
+
+   const {bookName, author, image, review, category, publisher, totalPages, rating, yearOfPublication, tags} = book || {};
+
     return (
        
         <Card className="max-w-6xl mx-auto h-[550px] flex-row justify-between gap-5">
@@ -51,12 +64,12 @@ const BooksDetails = () => {
 
         <div className='my-3 flex items-center gap-3'>
             <p className="font-bold">Tag</p>
-                <Button variant="outlined" size='sm' className="rounded-full border-[#23BE0A] text-[#23BE0A]">
-                    #Young Adult
-                </Button>
-                <Button variant="outlined" size='sm' className="rounded-full border-[#23BE0A] text-[#23BE0A]">
-                    #Identity
-                </Button>
+                <p className=" hover:underline text-[#23BE0A]">
+                    #{tags}
+                </p>
+                <p   className="hover:underline text-[#23BE0A]">
+                    #{tags}
+                </p>
             </div>
             <hr />
             <div className="space-y-5">
@@ -66,8 +79,14 @@ const BooksDetails = () => {
                 <p className="flex gap-10">Rating :  <span>{rating}</span></p>
             </div>
                 <div className="flex gap-5">
-                <Button color="blue">Read</Button>
-                <Button color="blue">Wishlist</Button>
+                <Button
+                  onClick={handleReadBtn}
+                 color="blue">Read</Button>
+
+
+                <Button
+                onClick={handleWishlistBtn}
+                 color="blue">Wishlist</Button>
                 </div>
       </CardBody>
     </Card>
