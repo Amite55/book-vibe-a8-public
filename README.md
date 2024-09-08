@@ -1,8 +1,6 @@
-# React + Vite
+# Book vibe shop 
+### this project is a online book library in react app project assingnment 08 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+surge live linlk :   https://colossal-sun1231.surge.sh/booksDetails/2
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) 
+netlify live link :   https://phenomenal-lebkuchen-41b686.netlify.app/
